@@ -1,0 +1,10 @@
+version: '3'
+services:
+    node:
+        build: .
+        #command: /bin/bash -c "npm run start && exec sleep infinity"
+        volumes:
+            - ./app:/usr/app/
+        ports:
+            - "8031:8031"
+        tty: true
